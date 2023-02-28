@@ -1,0 +1,110 @@
+.header {
+  height: 70px;
+  background-color: #27bccf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header .header-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 25px;
+  top: 10px;
+}
+
+.log-out-btn {
+  position: absolute;
+  right: 25px;
+}
+
+.login-cont {
+  height: 90vh;
+  display: grid;
+  align-items: center;
+}
+.login-cont .login-wrap {
+  color: #282c34;
+  font-weight: 600;
+  background-color: #dfdfdf;
+}
+.login-cont .login-wrap .login-img-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login-cont .login-wrap .login-img-wrapper .login-icons {
+  width: 60%;
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.login-cont .login-wrap .login-img-wrapper .login-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+.login-cont .login-wrap .login-img-wrapper .login-img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 8px 2px #282c34;
+  transform: scale(1.2);
+}
+.login-cont .login-wrap .login-img-wrapper .active {
+  box-shadow: 0 0 2px 6px #59c03a;
+  transform: scale(1.2);
+}
+.login-cont .login-wrap .login-img-wrapper .active:hover {
+  box-shadow: 0 0 2px 6px #59c03a;
+}
+.login-cont .login-wrap .login-submit-btn {
+  width: 100%;
+}
+.login-cont .login-wrap .text-error {
+  color: red;
+}
+.login-cont .login-wrap .error {
+  border: 2px solid red;
+}
+
+.main-cont {
+  height: 90vh;
+  display: grid;
+  align-items: center;
+}
+.main-cont .screen {
+  height: 60vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.msg-input {
+  border-top-left-radius: 0;
+}
+
+.msg-btn {
+  border-top-right-radius: 0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.app {
+  height: 100vh;
+  background-color: #282c34;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */

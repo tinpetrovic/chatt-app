@@ -1,0 +1,14 @@
+.main-cont {
+    height: 90vh;
+    display: grid;
+    align-items: center;
+
+    .screen {
+        height: 60vh;
+        background-color: $white-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+}
