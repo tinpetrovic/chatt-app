@@ -6,7 +6,7 @@ import { batman, ninja, warrior } from "../../images/index"
 
 const Login = () => {
 
-    const {user, setUser, loggedIn, setLoggedIn, drone, setDrone} = useContext(UserContext)
+    const {user, setUser, loggedIn, setLoggedIn, drone, setDrone, onUserLogin} = useContext(UserContext)
     const [selectedImage, setSelectedImage] = useState(0)
     const [logError, setLogError] = useState(false)
     const CHANNEL_ID = "EaWdVjFo8p9iAdWq"
@@ -15,40 +15,28 @@ const Login = () => {
         if (e.target.value !== "") {
             setLogError(false)
         }
-        setUser({...user, name: e.target.value})
+        setUser({...user, username: e.target.value})
     }
 
     const handleChoseAvatar = (e) => {
         if(e.target.src.includes("batman")) {
             setSelectedImage(1);
-            setUser({...user, img: e.target.src})
+            setUser({...user, avatar: e.target.src})
         } else if (e.target.src.includes("base64")) {
             setSelectedImage(2);
-            setUser({...user, img: e.target.src})
+            setUser({...user, avatar: e.target.src})
         } else if (e.target.src.includes("warrior")) {
             setSelectedImage(3);
-            setUser({...user, img: e.target.src})
+            setUser({...user, avatar: e.target.src})
         }
-        setUser({...user, img: e.target.src})
+        setUser({...user, avatar: e.target.src})
     }
 
-    function onUserLogin(username, avatar) {
-        if(username) {
-            const drone = new window.Scaledrone(CHANNEL_ID, {
-                data: { username, avatar },
-            });
-            drone.on("open", () => {
-                setDrone(drone)
-                setUser({id: drone.ClientId, username, avatar})
-            })
-            console.log(drone);
-        }
-    }
 
     const handleSubmitForm = (e) => {
         e.preventDefault() 
         if(user.name !== "") {
-            onUserLogin(user.name, user.img)
+            onUserLogin(user.username, user.avatar, CHANNEL_ID)
             setLogError(false)
             setLoggedIn(true)
 
