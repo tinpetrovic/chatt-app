@@ -18,6 +18,9 @@
 .log-out-btn {
   position: absolute;
   right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-cont {
@@ -40,6 +43,7 @@
   margin-left: 30px;
   display: flex;
   justify-content: space-around;
+  gap: 20px;
 }
 .login-cont .login-wrap .login-img-wrapper .login-img {
   width: 50px;
@@ -70,24 +74,112 @@
 }
 
 .main-cont {
-  height: 90vh;
+  height: 80vh;
   display: grid;
   align-items: center;
 }
 .main-cont .screen {
   height: 60vh;
   background-color: #fff;
+  color: #282c34;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .msg-input {
   border-top-left-radius: 0;
 }
+.msg-input:focus {
+  box-shadow: none;
+}
 
 .msg-btn {
   border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.messages-container {
+  padding: 20px;
+}
+
+.message {
+  background-color: #e0dddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.message .message-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.message .my-username {
+  position: absolute;
+  top: 5px;
+  font-size: 10px;
+  font-weight: 800;
+}
+.message .message-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.message .message-text {
+  margin: auto auto;
+}
+
+/* MY MESSAGE */
+.my-message {
+  background-color: #4de486;
+}
+.my-message::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: -6px;
+  left: -8px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 20px solid #4de486;
+  border-radius: 5px;
+  transform: rotate(30deg);
+}
+
+/* OTHER MESSAGE */
+.other-message {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+.other-message .other-message-wrapper {
+  flex-direction: row-reverse;
+}
+.other-message .other-username {
+  position: absolute;
+  top: 5px;
+  font-size: 10px;
+  font-weight: 800;
+}
+.other-message::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 20px solid #e0dddd;
+  border-radius: 5px;
+  transform: rotate(150deg);
 }
 
 *,

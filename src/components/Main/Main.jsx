@@ -23,7 +23,6 @@ const Main = () => {
         scaledrone.on("error", (error) => console.error(error));
     
         const room = scaledrone.subscribe(DEFAULT_ROOM_NAME);
-        console.log(room);
     
         room.on("error", (error) => console.error(error));
     

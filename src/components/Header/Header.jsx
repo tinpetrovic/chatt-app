@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Button, Image } from 'react-bootstrap'
 import { UserContext } from '../../context/UserContext'
+import { AiOutlinePoweroff } from "react-icons/ai";
 
 const Header = () => {
 
@@ -18,8 +19,8 @@ const Header = () => {
         {
         loggedIn && <div> <Image  src={user.avatar} className="header-img" /> </div>
         }
-        <h1>DroneScale Chatt App</h1>
-        {loggedIn && <Button className='log-out-btn' variant="danger" onClick={handleLogOut}>Log out</Button>}
+        <h1>Chatt App</h1>
+        {loggedIn && <Button className='log-out-btn' variant="danger" onClick={handleLogOut}><AiOutlinePoweroff /></Button>}
     </div>
   )
 }

@@ -1,0 +1,88 @@
+.message {
+    background-color: $message-other;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    .message-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .my-username {
+        position: absolute;
+        top: 5px;
+        font-size: 10px;
+        font-weight: 800;
+    }
+    
+    .message-img {
+        width: 20px;
+        height: 20px;
+       border-radius: 50%;
+    }
+
+    .message-text {
+        margin: auto auto;
+    }
+}
+
+/* MY MESSAGE */
+
+.my-message {
+    background-color: $message-mine;
+
+    &::after {
+     content: "";
+     height: 0;
+     width: 0;
+     position: absolute;
+     top: -6px;
+     left: -8px;
+     border-top: 10px solid transparent;   
+     border-bottom: 10px solid transparent;   
+     border-right: 20px solid $message-mine;
+     border-radius: 5px;
+     transform: rotate(30deg);
+    }
+}
+
+
+/* OTHER MESSAGE */
+
+.other-message {
+    justify-content: flex-end;
+    margin-left: auto;
+
+    .other-message-wrapper {
+        flex-direction: row-reverse;
+    }
+
+    .other-username {
+        position: absolute;
+        top: 5px;
+        font-size: 10px;
+        font-weight: 800;
+    }
+
+    &::after {
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: -6px;
+        right: -8px;
+        border-top: 10px solid transparent;   
+        border-bottom: 10px solid transparent;   
+        border-right: 20px solid $message-other;
+        border-radius: 5px;
+        transform: rotate(150deg);
+       }
+}

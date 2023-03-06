@@ -1,14 +1,16 @@
 .main-cont {
-    height: 90vh;
+    height: 80vh;
     display: grid;
     align-items: center;
 
     .screen {
         height: 60vh;
         background-color: $white-color;
+        color: $dark-color;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        overflow-y: scroll
         
     }
 }

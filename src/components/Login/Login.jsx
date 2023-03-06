@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
 import { UserContext } from '../../context/UserContext'
-import { batman, ninja, warrior } from "../../images/index"
+import { batman, ninja, warrior, male } from "../../images/index"
 
 
 const Login = () => {
@@ -22,11 +22,15 @@ const Login = () => {
         if(e.target.src.includes("batman")) {
             setSelectedImage(1);
             setUser({...user, avatar: e.target.src})
-        } else if (e.target.src.includes("base64")) {
+        } else if (e.target.src.includes("ninja")) {
             setSelectedImage(2);
             setUser({...user, avatar: e.target.src})
         } else if (e.target.src.includes("warrior")) {
             setSelectedImage(3);
+            setUser({...user, avatar: e.target.src})
+        } else if (e.target.src.includes("male")) {
+            
+            setSelectedImage(4);
             setUser({...user, avatar: e.target.src})
         }
         setUser({...user, avatar: e.target.src})
@@ -35,11 +39,10 @@ const Login = () => {
 
     const handleSubmitForm = (e) => {
         e.preventDefault() 
-        if(user.name !== "") {
+        if(user.username !== "") {
             onUserLogin(user.username, user.avatar, CHANNEL_ID)
             setLogError(false)
             setLoggedIn(true)
-
         } else {
             setLogError(true)
         }
@@ -79,6 +82,7 @@ const Login = () => {
                             <Image src={batman} className={selectedImage === 1 ? "active login-img" : "login-img"} onClick={(e) => handleChoseAvatar(e)}/>
                             <Image src={ninja} className={selectedImage === 2 ? "active login-img" : "login-img"} onClick={(e) => handleChoseAvatar(e)}/>
                             <Image src={warrior} className={selectedImage === 3 ? "active login-img" : "login-img"} onClick={(e) => handleChoseAvatar(e)}/>
+                            <Image src={male} className={selectedImage === 4 ? "active login-img" : "login-img"} onClick={(e) => handleChoseAvatar(e)}/>
                         </div>
                     </div>
 
