@@ -60,6 +60,7 @@ const Login = () => {
                             type="text" 
                             placeholder={logError ? "Please enter Name!" : "Enter name"}
                             autoFocus
+                            maxLength="10"
                             onChange={(e) => handleChangeUserName(e)} 
                         />
                         { logError &&
