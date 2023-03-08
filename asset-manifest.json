@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chatt-app/static/css/main.218afe1c.css",
-    "main.js": "/chatt-app/static/js/main.f89c17ef.js",
+    "main.js": "/chatt-app/static/js/main.25230412.js",
     "static/js/787.6f726199.chunk.js": "/chatt-app/static/js/787.6f726199.chunk.js",
     "static/media/warrior.png": "/chatt-app/static/media/warrior.b10ea5cb3cbe3c008870.png",
     "static/media/male.png": "/chatt-app/static/media/male.fef79e5751a0ae54d530.png",
@@ -9,11 +9,11 @@
     "static/media/batman.webp": "/chatt-app/static/media/batman.fda30f8eae3927b9034c.webp",
     "index.html": "/chatt-app/index.html",
     "main.218afe1c.css.map": "/chatt-app/static/css/main.218afe1c.css.map",
-    "main.f89c17ef.js.map": "/chatt-app/static/js/main.f89c17ef.js.map",
+    "main.25230412.js.map": "/chatt-app/static/js/main.25230412.js.map",
     "787.6f726199.chunk.js.map": "/chatt-app/static/js/787.6f726199.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.218afe1c.css",
-    "static/js/main.f89c17ef.js"
+    "static/js/main.25230412.js"
   ]
 }
