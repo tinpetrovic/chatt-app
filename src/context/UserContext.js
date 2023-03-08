@@ -1,9 +1,10 @@
 import React, { createContext, useState } from 'react'
+import { batman } from '../images/index'
 
 const UserContext = createContext()
 
 const UserContextProvider = ({children}) => {
-  const [user, setUser] = useState({username: "", avatar: "batman"})
+  const [user, setUser] = useState({username: "", avatar: batman})
   const [loggedIn, setLoggedIn] = useState(false)
   const [drone, setDrone] = useState(null)
 

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Button, Image } from 'react-bootstrap'
 import { UserContext } from '../../context/UserContext'
 import { AiOutlinePoweroff } from "react-icons/ai";
+import { batman } from '../../images/index';
 
 const Header = () => {
 
@@ -11,7 +12,7 @@ const Header = () => {
     drone.close()
     setDrone(null)
     setLoggedIn(false)
-    setUser({username: "", avatar: "batman"})
+    setUser({username: "", avatar: batman})
   }
 
   return (
