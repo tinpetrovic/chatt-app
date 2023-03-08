@@ -8,9 +8,28 @@
         background-color: $white-color;
         color: $dark-color;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        overflow-y: scroll
-        
+        justify-content: flex-start; 
+
+        .messages-input {
+            width: 80%;
+            margin-top: auto
+        }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .main-cont {
+    
+        .screen {
+            flex-direction: column-reverse;
+            gap: 3em;
+    
+            .messages-input {
+                height: 70%;
+                width: 100%;
+            }
+        }
+    }
+
+}
+

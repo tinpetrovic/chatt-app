@@ -14,7 +14,7 @@ const UserContextProvider = ({children}) => {
     });
     drone.on("open", () => {
         setDrone(drone)
-        setUser({id: drone.ClientId, username, avatar})
+        setUser({id: drone.clientId, username, avatar})
     })
 }
 

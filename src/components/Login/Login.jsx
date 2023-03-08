@@ -6,7 +6,7 @@ import { batman, ninja, warrior, male } from "../../images/index"
 
 const Login = () => {
 
-    const {user, setUser, loggedIn, setLoggedIn, drone, setDrone, onUserLogin} = useContext(UserContext)
+    const {user, setUser, setLoggedIn, onUserLogin} = useContext(UserContext)
     const [selectedImage, setSelectedImage] = useState(0)
     const [logError, setLogError] = useState(false)
     const CHANNEL_ID = "EaWdVjFo8p9iAdWq"

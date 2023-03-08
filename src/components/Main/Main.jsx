@@ -3,6 +3,7 @@ import { UserContext } from '../../context/UserContext'
 import { Container, Row, Col } from 'react-bootstrap'
 import Input from './Input/Input';
 import Messages from './Messages/Messages';
+import Members from './Members/Members';
 
 
 const Main = () => {
@@ -100,10 +101,13 @@ const Main = () => {
   return (
     <Container className='main-cont'>
         <Row className="justify-content-center align-itmes-center">
-            <Col lg="8" className="p-5 rounded main-wrap">
+            <Col lg="10" sm="11" className="p-5 rounded main-wrap">
                 <div className='screen rounded'>
-                    <Messages messages={messages} user={user} />
-                    <Input  publishMessage={publishMessage} />
+                    <Members members={members}/>
+                    <div className='messages-input'>
+                      <Messages messages={messages} user={user} />
+                      <Input  publishMessage={publishMessage} />
+                    </div>
                 </div>
                 
             </Col>

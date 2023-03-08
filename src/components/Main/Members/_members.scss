@@ -1,0 +1,25 @@
+.members-cont {
+    width: 20%;
+    border-right: 1px solid $dark-color;
+    padding: 5px;
+    overflow-y: auto;
+
+    .members-count {
+        background-color: $active-img;
+        color: $white-color;
+        border-radius: 50%;
+        padding: 2px 6px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .members-cont {
+        height: 30%;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid $dark-color;
+    }
+    
+
+}
